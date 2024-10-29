@@ -39,7 +39,11 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of viewing detailed brewery pages and graphs:
+
+![](https://github.com/juliettepark/brewery-discovery/blob/main/brewery_discovery_routes_demo.gif)
+
+Here's a walkthrough of brewery search and filters:
 
 ![](https://github.com/juliettepark/brewery-discovery/blob/main/brewery_discovery_demo.gif)
 

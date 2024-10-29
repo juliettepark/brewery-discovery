@@ -5,6 +5,42 @@ import './App.css'
 import './components/BrewList';
 import BrewList from './components/BrewList';
 import Card from './components/Card';
+import { Link } from 'react-router-dom';
+import {
+  Chart,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+import { Bar } from "react-chartjs-2";
+
+
+Chart.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+Chart.defaults.color = "#FFFFFF";
+
+const options = {
+  response: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: {
+      display: true,
+      text: "Graph of the number of breweries located in each state",
+    },
+  },
+}
 
 function App() {
   const [totalList, setTotalList] = useState([]);
@@ -50,6 +86,31 @@ function App() {
     // console.log(maxCount);
 
     return maxCity;
+  }
+
+  const stateToBrewery = () => {
+    let frequency = {};
+
+    totalList.forEach(brewery => {
+      frequency[brewery.state] = (frequency[brewery.state] || 0) + 1;
+    });
+
+    return frequency;
+  }
+
+  const stateCount = stateToBrewery();
+  const labels = Object.keys(stateCount);
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Brewery Count",
+        data: Object.values(stateCount),
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        fillColor: 'rgba(255, 255, 255, 0.5)',
+        color: 'rgba(255, 255, 255, 0.5)',
+      }
+    ]
   }
 
   const calculateBreweryType = () => {
@@ -111,6 +172,8 @@ function App() {
     <>
       <div>
         <h1>Brewery Discovery! 🍻</h1>
+
+        <Bar options={options} data={data} />
   
         <div className='metrics'>
           <Card descrip="City with the most breweries:" metric={calculateMostBreweries()}/>

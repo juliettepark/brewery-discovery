@@ -68,8 +68,43 @@
   text-decoration: none;
   font-size: medium;
   font-family: "SUSE";
-  border: 1px solid yellow;
+  border: 2px solid rgb(87, 33, 33);
+  background-color: rgb(87, 33, 33);
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 2%;
   padding: 1%;
+  color:whitesmoke;
+  list-style-type: none;
+}
+
+body {
+  background-color:black;
+  color: whitesmoke;
+}
+
+.detailView {
+  background-color: rgb(87, 33, 33);
+  padding: 10%;
+  border-radius: 10px;
+  text-align: left;
+  font-size: large;
+  border: 5px solid white;
+}
+
+.detailView > h1 {
+  text-align: center;
+}
+
+.homeButton {
+  color: whitesmoke;
+  background-color: rgb(87, 33, 33);
+  font-size: x-large;
+  padding: 1% 2%;
+  border-radius: 10px;
+  /* text-align: left; */
+}
+
+.home-link {
+  /* text-align: left; */
+  list-style-type: none;
 }

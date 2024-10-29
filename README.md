@@ -1,14 +1,22 @@
-# Web Development Project 5 - *Brewery Discovery! 🍻*
+# Web Development Project 5/6 - *Brewery Discovery! 🍻*
 
 Submitted by: **Juliette Park**
 
-This web app: **Browse and filter your search for the next brewery to visit!**
+This web app: **Browse, filter, and visualize your search for the next brewery to visit!**
 
-Time spent: **6** hours spent in total
+Time spent: **6 (Project 5) + 6 (Project 6)** hours spent in total
 
 ## Required Features
 
-The following **required** functionality is completed:
+Project 6: The following **required** functionality is completed:
+
+- [X] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [X] **Clicking on an item in the list view displays more details about it**
+  - [X] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [X] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [X] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording. 
+
+Project 5: The following **required** functionality is completed:
 
 - [X] **The list displays a list of data fetched using an API call**
 - [X] **Data uses the useEffect React hook and async/await syntax**
